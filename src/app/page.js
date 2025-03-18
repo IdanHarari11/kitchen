@@ -4,14 +4,14 @@ import { useEffect } from 'react';
 import HeroSection from '@/components/HeroSection';
 import FeaturesSection from '@/components/FeatureSection';
 import AboutSection from '@/components/AboutSection';
-import ProcessSection from '@/components/ProcessSection';
 import ServicesSection from '@/components/ServicesSection';
+import ProcessSection from '@/components/ProcessSection';
 import BeforeAfterSection from '@/components/BeforeAfterSection';
+import StatsCounter from '@/components/StatsCounter';
+import GallerySection from '@/components/Gallery';
 import AnimatedTestimonials from '@/components/AnimatedTestimonials';
 import FaqSection from '@/components/FaqSection';
 import CtaSection from '@/components/CtaSection';
-import StatsSection from '@/components/StatsSection';
-import GallerySection from '@/components/Gallery';
 import ContactSection from '@/components/ContactForm';
 import { setupSmoothScrolling } from '@/utils/scrollHelpers';
 
@@ -48,17 +48,17 @@ export default function Home() {
       <HeroSection />
       <FeaturesSection />
       <AboutSection />
-      <StatsSection />
       <ServicesSection />
       <ProcessSection />
       <BeforeAfterSection />
+      <StatsCounter />
+      <GallerySection />
+      <AnimatedTestimonials />
+      <FaqSection />
       <CtaSection 
         title="Ready to Start Your Dream Kitchen Project?" 
         subtitle="Take the first step toward transforming your kitchen with our expert team"
       />
-      <GallerySection />
-      <AnimatedTestimonials />
-      <FaqSection />
       <ContactSection />
     </main>
   );
