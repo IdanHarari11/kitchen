@@ -48,8 +48,12 @@ const FeatureCard = ({ title, description, imageSrc, index = 0 }) => {
             src={imageSrc}
             alt={title}
             fill
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
             style={{ objectFit: 'cover' }}
-            priority={index < 2} // Prioritize loading for first two cards
+            quality={85}
+            loading={index < 2 ? "eager" : "lazy"}
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAJpAN6dVmTQgAAAABJRU5ErkJggg=="
           />
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
@@ -62,7 +66,10 @@ const FeatureCard = ({ title, description, imageSrc, index = 0 }) => {
       </div>
       
       <div className="px-6 pb-6">
-        <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-primary-600 px-8 py-3 text-white transition duration-300 ease-out">
+        <button 
+          className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-primary-600 px-8 py-3 text-white transition duration-300 ease-out"
+          aria-label={`Learn more about ${title}`}
+        >
           <span className="absolute inset-0 bg-gradient-to-r from-primary-500 to-primary-700 transition-all duration-300 ease-out group-hover:scale-105"></span>
           <span className="relative flex items-center gap-2">
             Learn More
@@ -71,6 +78,7 @@ const FeatureCard = ({ title, description, imageSrc, index = 0 }) => {
               className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" 
               viewBox="0 0 20 20" 
               fill="currentColor"
+              aria-hidden="true"
             >
               <path 
                 fillRule="evenodd" 
