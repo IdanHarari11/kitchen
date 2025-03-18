@@ -49,6 +49,15 @@ const testimonials = [
     content: "As an interior designer, I have high standards for kitchen renovations. Master Kitchen exceeded all my expectations. Their European style cabinets are exceptional quality and the installation was perfect. I'll be recommending them to all my clients.",
     rating: 5,
     videoUrl: null
+  },
+  {
+    id: 6,
+    name: "John Doe",
+    role: "Homeowner in Los Angeles",
+    imageUrl: "/images/testimonial-5.jpg",
+    content: "I had a great experience with Master Kitchen. The team was professional and the quality of the materials was outstanding. I highly recommend them for any kitchen renovation.",
+    rating: 5,
+    videoUrl: null
   }
 ];
 
